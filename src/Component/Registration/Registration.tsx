@@ -26,7 +26,6 @@ const Registration = ()=>{
     })
 
     const onHandleChange = (e:React.ChangeEvent<HTMLInputElement> |CheckboxChangeEvent)=>{
-        debugger
         e.stopPropagation()
         const {name,value,type,checked}=e.target;
         if(type==='checkbox') {
@@ -40,11 +39,11 @@ const Registration = ()=>{
             }
 
         }else{
-            console.log("444444",checked)
+
             setData({...data, [name as string]: value});
         }
     }
-    console.log("fdsfhjdsjfghd9789789789789789789879879789sjgfj00000",data)
+
     const onSubmit=()=>{
         console.log(data)
     }
